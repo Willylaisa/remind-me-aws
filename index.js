@@ -86,7 +86,7 @@ app.get('/users/:id', async (req, res) => {
 // SEND TASKS TO FRONTEND
 app.get('/tasks', (req, res) => {  
     theRealDeal()  
-    newTask.find()
+    newTask.find().sort({createdAt: -1})
         .then((tasks)=> {
             res.status(200).json(tasks)
         })
