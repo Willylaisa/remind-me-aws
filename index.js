@@ -71,6 +71,10 @@ app.post('/login', (req, res) => {
         })  
 })
 
+app.get('/.well-known/pki-validation/D7262297463449C76467AEBD81A2F5F5.txt', (req, res)=> {
+    res.sendFile('./D7262297463449C76467AEBD81A2F5F5.txt')
+})
+
 // GET TASKS
 app.get('/users/:id', async (req, res) => {
     let identification = req.params.id
